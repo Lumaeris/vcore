@@ -1,0 +1,18 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: vcore
+description: This is my personal OS image.
+base-image: ghcr.io/ublue-os/ucore-hci
+image-version: stable-nvidia-lts
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: script
+    snippets:
+      - "dnf5 clean all"
+
+  - type: signing
