@@ -15,4 +15,11 @@ modules:
     snippets:
       - "dnf5 clean all"
 
+  - type: systemd
+    system:
+      enabled:
+        - bootc-fetch-apply-updates.timer
+      disabled:
+        - rpm-ostreed-automatic.timer
+
   - type: signing
