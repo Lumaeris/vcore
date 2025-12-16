@@ -19,6 +19,7 @@ modules:
     system:
       enabled:
         - bootc-fetch-apply-updates.timer
+        - tailscaled.service
       disabled:
         - rpm-ostreed-automatic.timer
 
